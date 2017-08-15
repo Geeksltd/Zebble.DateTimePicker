@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
-    "Zebble": "4.1.285"
+    "Zebble": "4.1.286"
     "Zebble.ItemPicker": "3.12.136",
     "Zebble.ListView": "3.17.122"
   },
@@ -17,4 +17,5 @@
     "win10-x64-aot": {}
   }
 }
+
 
