@@ -10,6 +10,8 @@ namespace Zebble
             public readonly TextView Label = new TextView { Id = "Label" };
             public Item Item { get; set; }
 
+            public override string ToString() => "DatePicker-Cell - " + Item;
+
             public override async Task OnInitializing()
             {
                 await base.OnInitializing();

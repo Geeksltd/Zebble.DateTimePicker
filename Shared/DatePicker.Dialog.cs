@@ -110,16 +110,16 @@
                     foreach (var item in daysSource.Skip(rotatorCount))
                         await DaysRotator.Append(item);
 
-                DaysRotator.PreSelect(item => item.Value == selectedDay);
+                await DaysRotator.PreSelect(item => item.Value == selectedDay);
             }
 
-            protected void LoadCurrentValue()
+            protected async Task LoadCurrentValue()
             {
                 var date = Picker.SelectedValue ?? LocalTime.Today;
 
-                YearsRotator.PreSelect(x => x.Value == date.Year);
-                MonthsRotator.PreSelect(x => x.Value == date.Month);
-                DaysRotator.PreSelect(x => x.Value == date.Day);
+                await YearsRotator.PreSelect(x => x.Value == date.Year);
+                await MonthsRotator.PreSelect(x => x.Value == date.Month);
+                await DaysRotator.PreSelect(x => x.Value == date.Day);
             }
 
             public override void Dispose()
