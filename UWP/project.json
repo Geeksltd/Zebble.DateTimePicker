@@ -1,9 +1,9 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
-    "Zebble": "4.2.342",
-    "Zebble.ItemPicker": "3.12.145",
-    "Zebble.ListView": "3.17.131"
+    "Zebble": "4.2.351",
+    "Zebble.ItemPicker": "3.12.146",
+    "Zebble.ListView": "3.17.137"
   },
   "frameworks": {
     "uap10.0": {}
@@ -17,7 +17,3 @@
     "win10-x64-aot": {}
   }
 }
-
-
-
-
