@@ -1,12 +1,12 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
-    "Zebble": "4.2.351",
-    "Zebble.ItemPicker": "3.12.146",
-    "Zebble.ListView": "3.17.137"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
+    "Zebble": "4.3.100",
+    "Zebble.ItemPicker": "3.12.151",
+    "Zebble.ListView": "3.17.142"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10240": {}
   },
   "runtimes": {
     "win10-arm": {},
