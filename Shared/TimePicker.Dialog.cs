@@ -36,20 +36,21 @@ namespace Zebble
                 if (Picker.SelectedValue == null)
                     Picker.SelectedValue = LocalTime.Now.Hour.Hours().Add(LocalTime.Now.Minute.RoundUpToNearest(5).Minutes());
 
-                //Hours
+                // Hours
                 var hoursRange = Picker.TimeFormat == TimeFormat.Twentyfour ? Enumerable.Range(1, 23) : Enumerable.Range(1, 12);
                 var hours = hoursRange.Select(hour => new Item { Value = hour, Text = hour.ToString("00") });
                 await HoursRotator.SetSource(hours);
 
-                //Minutes
+                // Minutes
                 var minutes = Enumerable.Range(0, 60).Where(minute => (minute % Picker.MinuteInterval) == 0)
                     .Select(minute => new Item { Value = minute, Text = minute.ToString("00") });
                 await MinutesRotator.SetSource(minutes);
-                MinutesRotator.Style.Ignored = Picker.TimeFormat != TimeFormat.AMPM;
 
-                //TimeMode
+                // TimeMode
                 if (Picker.TimeFormat == TimeFormat.AMPM)
                     await AmPmRotator.SetSource(new[] { new Item { Value = AM, Text = "AM" }, new Item { Value = PM, Text = "PM" } });
+
+                AmPmRotator.Style.Ignored(Picker.TimeFormat != TimeFormat.AMPM);
 
                 await Content.Add(RotatorsRow);
 
@@ -91,6 +92,5 @@ namespace Zebble
                 base.Dispose();
             }
         }
-
     }
 }
