@@ -1,11 +1,11 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
-    "Zebble": "4.3.100",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7",
+    "Zebble": "4.4.104",
     "Zebble.CheckBox": "1.22.110",
-    "Zebble.ItemPicker": "3.12.151",
-    "Zebble.ListView": "3.17.142",
-    "Zebble.SearchInput": "3.18.265"
+    "Zebble.ItemPicker": "3.12.155",
+    "Zebble.ListView": "3.17.143",
+    "Zebble.SearchInput": "3.18.266"
   },
   "frameworks": {
     "uap10.0.10240": {}
