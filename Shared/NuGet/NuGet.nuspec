@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Zebble.DateTimePicker</id>
-    <version>4.5.275</version>
+    <version>4.5.276</version>
     <title>Date/time pickers for Zebble (Xamarin)</title>
     <description>Basic date picker and time picker components for Zebble.</description>
     <iconUrl>https://raw.githubusercontent.com/Geeksltd/Zebble.DateTimePicker/master/Shared/NuGet/Icon.png</iconUrl>
