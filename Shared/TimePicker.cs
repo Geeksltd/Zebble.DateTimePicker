@@ -8,7 +8,7 @@ namespace Zebble
         const int AM = 1;
         const int PM = 2;
 
-        public static string DefaultFormat = "HH:mm tt";
+        public static string DefaultFormat = "hh:mm tt";
         public int MinuteInterval = 5;
         public TimeFormat TimeFormat = TimeFormat.AMPM;
 
