@@ -79,6 +79,9 @@ namespace Zebble
                 var hours = time.Hours;
                 if (Picker.TimeFormat == TimeFormat.AMPM && hours > 12) hours -= 12;
 
+                if (Picker.TimeFormat == TimeFormat.AMPM && hours == 0)
+                    hours = 12;
+
                 HoursRotator.PreSelect(x => x.Value == hours);
                 MinutesRotator.PreSelect(x => x.Value == time.Minutes);
 

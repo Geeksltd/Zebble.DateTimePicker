@@ -44,6 +44,9 @@ namespace Zebble
             if (TimeFormat == TimeFormat.AMPM && dialog.AmPmRotator.SelectedItem.Value == PM && hour < 12)
                 hour += 12;
 
+            if (TimeFormat == TimeFormat.AMPM && dialog.AmPmRotator.SelectedItem.Value == AM && hour == 12)
+                hour = 0;
+
             SelectedValue = new TimeSpan(hour, minute, 0);
             await SelectedValueChanged.Raise();
 
