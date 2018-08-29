@@ -45,7 +45,7 @@
       <HintPath>..\packages\Zebble.CheckBox.1.22.110\lib\Xamarin.iOS10\Zebble.CheckBox.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.4.4.104\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.4.4.124\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ItemPicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Zebble.ItemPicker.3.12.155\lib\Xamarin.iOS10\Zebble.ItemPicker.iOS.dll</HintPath>
