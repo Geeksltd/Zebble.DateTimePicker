@@ -37,7 +37,7 @@ namespace Zebble
                     Picker.SelectedValue = LocalTime.Now.Hour.Hours().Add(LocalTime.Now.Minute.RoundUpToNearest(5).Minutes());
 
                 // Hours
-                var hoursRange = Picker.TimeFormat == TimeFormat.Twentyfour ? Enumerable.Range(1, 23) : Enumerable.Range(1, 12);
+                var hoursRange = Picker.TimeFormat == TimeFormat.Twentyfour ? Enumerable.Range(0, 24) : Enumerable.Range(1, 12);
                 var hours = hoursRange.Select(hour => new Item { Value = hour, Text = hour.ToString("00") });
                 await HoursRotator.SetSource(hours);
 
