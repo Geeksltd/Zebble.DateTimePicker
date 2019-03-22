@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Zebble.DateTimePicker</id>
-    <version>4.5.279</version>
+    <version>4.5.283</version>
     <title>Date/time pickers for Zebble (Xamarin)</title>
     <description>Basic date picker and time picker components for Zebble.</description>
     <iconUrl>https://raw.githubusercontent.com/Geeksltd/Zebble.DateTimePicker/master/Shared/NuGet/Icon.png</iconUrl>
     <projectUrl>https://github.com/Geeksltd/Zebble.DateTimePicker</projectUrl>
     <authors>Geeks Ltd</authors>
     <owners>Geeks Ltd</owners>
-    <copyright>Copyright © 2018 Geeks Ltd - All rights reserved.</copyright>
+    <copyright>Copyright © 2019 Geeks Ltd - All rights reserved.</copyright>
     <dependencies>
       <dependency id="Zebble.ItemPicker" version="3.12.156" />
     </dependencies>
@@ -17,12 +17,9 @@
   <files>
     <file src="..\..\lib\Zebble.DateTimePicker.iOS.*" target="lib\Xamarin.iOS10\" />
     <file src="..\..\lib\Zebble.DateTimePicker.Android.*" target="lib\MonoAndroid10\" />
-
     <file src="..\..\lib\bin\ARM\Release\Zebble.DateTimePicker.UWP.*" target="runtimes\win10-arm\lib\uap10.0" />
     <file src="..\..\lib\bin\x64\Release\Zebble.DateTimePicker.UWP.*" target="runtimes\win10-x64\lib\uap10.0" />
     <file src="..\..\lib\bin\x86\Release\Zebble.DateTimePicker.UWP.*" target="runtimes\win10-x86\lib\uap10.0" />
-
     <file src="..\..\lib\bin\Release\Zebble.DateTimePicker.UWP.*" target="ref\uap10.0" />
-    
   </files>
 </package>
