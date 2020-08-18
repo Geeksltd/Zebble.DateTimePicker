@@ -115,16 +115,16 @@
       <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Zebble">
-      <Version>4.4.241</Version>
+      <Version>4.5.359</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
-      <Version>1.22.115</Version>
+      <Version>1.22.116</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
-      <Version>3.12.162</Version>
+      <Version>3.12.164</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>4.10.156</Version>
+      <Version>4.10.169</Version>
     </PackageReference>
     <PackageReference Include="Zebble.SearchInput">
       <Version>3.18.272</Version>

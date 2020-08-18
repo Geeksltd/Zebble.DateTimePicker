@@ -3,7 +3,7 @@ namespace Zebble
     using System;
     using System.Threading.Tasks;
 
-    public partial class DatePicker : Picker, FormField.IPlaceHolderControl, FormField.IControl
+    public partial class DatePicker : Picker, FormField.IPlaceHolderControl, FormField.IControl, IBindableInput
     {
         // Formatting
         public string TextFormat = "dd MMM yyyy";
@@ -19,7 +19,12 @@ namespace Zebble
         public DateTime? SelectedValue
         {
             get => selectedValue;
-            set { selectedValue = value; SelectedText = selectedValue.ToString(TextFormat); }
+            set
+            {
+                selectedValue = value; 
+                SelectedText = selectedValue.ToString(TextFormat);
+                SelectedValueChanged.Raise();
+            }
         }
 
         object FormField.IControl.Value
@@ -27,6 +32,8 @@ namespace Zebble
             get => SelectedValue;
             set => SelectedValue = (DateTime?)value;
         }
+
+        public void AddBinding(Bindable bindable) => SelectedValueChanged.Handle(() => bindable.SetUserValue(SelectedValue));
 
         protected override Zebble.Dialog CreateDialog()
         {
