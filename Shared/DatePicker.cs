@@ -23,7 +23,6 @@ namespace Zebble
             {
                 selectedValue = value; 
                 SelectedText = selectedValue.ToString(TextFormat);
-                SelectedValueChanged.Raise();
             }
         }
 

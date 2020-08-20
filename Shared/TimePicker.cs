@@ -3,7 +3,7 @@ namespace Zebble
     using System;
     using System.Threading.Tasks;
 
-    public partial class TimePicker : Picker, FormField.IPlaceHolderControl, FormField.IControl
+    public partial class TimePicker : Picker, FormField.IPlaceHolderControl, FormField.IControl, IBindableInput
     {
         const int AM = 1;
         const int PM = 2;
@@ -26,6 +26,8 @@ namespace Zebble
                 SelectedText = value.Get(v => LocalTime.Today.Add(v.Value).ToString(TextFormat));
             }
         }
+
+        public void AddBinding(Bindable bindable) => SelectedValueChanged.Handle(() => bindable.SetUserValue(SelectedValue));
 
         protected override Zebble.Dialog CreateDialog()
         {
