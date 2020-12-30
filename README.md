@@ -1,4 +1,4 @@
-[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.DateTimePicker/master/Shared/NuGet/Icon.png "Zebble.DateTimePicker"
+﻿[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.DateTimePicker/master/icon.png "Zebble.DateTimePicker"
 
 
 ## Zebble.DateTimePicker
