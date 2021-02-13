@@ -4,10 +4,9 @@ namespace Zebble
     using System.Threading.Tasks;
     using Olive;
 
-    public partial class TimePicker : Picker, FormField.IPlaceHolderControl, FormField.IControl, IBindableInput
+    public partial class TimePicker : Picker
     {
-        const int AM = 1;
-        const int PM = 2;
+        const int AM = 1, PM = 2;
 
         public static string DefaultFormat = "hh:mm tt";
         public int MinuteInterval = 5;
@@ -15,6 +14,8 @@ namespace Zebble
 
         TimeSpan? selectedValue;
         public readonly AsyncEvent SelectedValueChanged = new AsyncEvent();
+
+        public TimePicker() => SelectedValueChanged.Handle(() => RaiseInputChanged(nameof(SelectedValue)));
 
         public string TextFormat { get; set; } = DefaultFormat;
 
@@ -24,11 +25,9 @@ namespace Zebble
             set
             {
                 selectedValue = value;
-                SelectedText = value.Get(v => LocalTime.Today.Add(v.Value).ToString(TextFormat));
+                SetSelectedText(SelectedValue.Get(v => LocalTime.Today.Add(v.Value).ToString(TextFormat)));
             }
         }
-
-        public void AddBinding(Bindable bindable) => SelectedValueChanged.Handle(() => bindable.SetUserValue(SelectedValue));
 
         protected override Zebble.Dialog CreateDialog()
         {
@@ -54,12 +53,6 @@ namespace Zebble
             await SelectedValueChanged.Raise();
 
             await hide;
-        }
-
-        object FormField.IControl.Value
-        {
-            get => SelectedValue;
-            set => SelectedValue = (TimeSpan?)value;
         }
 
         public override void Dispose()
