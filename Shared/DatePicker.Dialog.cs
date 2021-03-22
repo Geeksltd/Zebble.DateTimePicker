@@ -38,8 +38,8 @@
                 await MonthsRotator.SetSource(GetMonths());
                 await YearsRotator.SetSource(GetYears());
 
-                MonthsRotator.SelectionChanged.Handle(() => UIWorkBatch.Run(UpdateDaysBasedOnMonthAndYear));
-                YearsRotator.SelectionChanged.Handle(() => UIWorkBatch.Run(UpdateDaysBasedOnMonthAndYear));
+                MonthsRotator.SelectionChanged.HandleOnUI(() => UIWorkBatch.Run(UpdateDaysBasedOnMonthAndYear));
+                YearsRotator.SelectionChanged.HandleOnUI(() => UIWorkBatch.Run(UpdateDaysBasedOnMonthAndYear));
 
                 await Content.Add(RotatorsRow);
                 await RotatorsRow.AddRange(new[] { DaysRotator, MonthsRotator, YearsRotator });
